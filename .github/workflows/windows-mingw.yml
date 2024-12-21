@@ -1,0 +1,30 @@
+name: Build-Windows-MinGW
+
+on:
+  workflow_dispatch:
+
+env:
+  QT_VERSION: 6.8.1
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: windows-latest
+
+    steps:
+      - name: Install Tool (windows)
+        run: choco install ninja cmake make
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: ${{env.QT_VERSION}}
+          arch: win64_mingw
+
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          cmake -S . -B build_dir -G "Ninja Multi-Config"
+          cmake --build build_dir --config Release
