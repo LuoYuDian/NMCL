@@ -13,7 +13,9 @@ jobs:
 
     steps:
       - name: Install Tool (windows)
-        run: choco install ninja cmake make
+        run: choco install ninja cmake make git wget tree
+      - name: Check Project
+        run: tree
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
@@ -26,5 +28,5 @@ jobs:
 
       - name: Build
         run: |
-          cmake -S . -B build_dir -G "Ninja Multi-Config"
-          cmake --build build_dir --config Release
+          cmake -S . -B build -G Ninja
+          cmake --build build --config Release

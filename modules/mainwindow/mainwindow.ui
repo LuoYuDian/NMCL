@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>NMCL</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="icon.qrc">
+    <normaloff>:/modules/mainwindow/icon.qrc/logo.png</normaloff>:/modules/mainwindow/icon.qrc/logo.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="NMCL">
     <property name="geometry">
@@ -40,6 +44,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

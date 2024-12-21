@@ -2,13 +2,13 @@
 // NMCL 主程序
 
 #include <mainwindow/mainwindow.hpp>
-
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+    MainWindow window;
+    window.setWindowIcon(QIcon(":/modules/mainwindow/icon.qrc/logo.png"));
+    window.show();
+    return app.exec();
 }

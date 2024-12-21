@@ -1,4 +1,5 @@
 # NMCL
+![logo](modules/mainwindow/logo.png)
 一个免费开源的MC启动器
 
 # 编译与运行

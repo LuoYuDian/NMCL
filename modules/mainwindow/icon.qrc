@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/modules/mainwindow/icon.qrc">
+        <file>logo.png</file>
+    </qresource>
+</RCC>
